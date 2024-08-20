@@ -22,9 +22,9 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./docker/dockerfile.user
+        file: ./Dockerfile
         push: true
         tags: harshithreddy6322/ci_cd_dockerapp:latest  # Replace with your Docker Hub username and repository
 
     - name: Verify Pushed Image
-      run: harshithreddy6322/ci_cd_dockerapp:latest   # Replace with your Docker Hub username and repository
+      run: docker pull harshithreddy6322/ci_cd_dockerapp:latest # Replace with your Docker Hub username and repository
